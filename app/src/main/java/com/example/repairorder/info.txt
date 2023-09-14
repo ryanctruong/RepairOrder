@@ -1,0 +1,2 @@
+1. I used a textView for the heading then for the dollar values, I used an edit vlaue
+2. textView is not dynamic where as editView allows users to type on the line

@@ -7,6 +7,39 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/total_value"
+        android:layout_width="86dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="664dp"
+        android:layout_marginEnd="16dp"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="$" />
+
+    <TextView
+        android:id="@+id/tax_value"
+        android:layout_width="86dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="620dp"
+        android:layout_marginEnd="16dp"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="$" />
+
+    <TextView
+        android:id="@+id/subtotal_value"
+        android:layout_width="86dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="572dp"
+        android:layout_marginEnd="16dp"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="$" />
+
+    <TextView
         android:id="@+id/textView11"
         android:layout_width="86dp"
         android:layout_height="33dp"
@@ -84,7 +117,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextText11"
+        android:id="@+id/labor_edit"
         android:layout_width="173dp"
         android:layout_height="38dp"
         android:layout_marginTop="36dp"
@@ -92,10 +125,10 @@
         android:ems="10"
         android:inputType="text"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText10" />
+        app:layout_constraintTop_toBottomOf="@+id/parts_edit" />
 
     <EditText
-        android:id="@+id/editTextText10"
+        android:id="@+id/parts_edit"
         android:layout_width="173dp"
         android:layout_height="38dp"
         android:layout_marginTop="40dp"
@@ -103,10 +136,10 @@
         android:ems="10"
         android:inputType="text"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText9" />
+        app:layout_constraintTop_toBottomOf="@+id/paint_edit" />
 
     <EditText
-        android:id="@+id/editTextText9"
+        android:id="@+id/paint_edit"
         android:layout_width="173dp"
         android:layout_height="38dp"
         android:layout_marginTop="28dp"
@@ -114,10 +147,10 @@
         android:ems="10"
         android:inputType="text"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText8" />
+        app:layout_constraintTop_toBottomOf="@+id/inspect_edit" />
 
     <EditText
-        android:id="@+id/editTextText8"
+        android:id="@+id/inspect_edit"
         android:layout_width="173dp"
         android:layout_height="38dp"
         android:layout_marginTop="32dp"
@@ -125,10 +158,10 @@
         android:ems="10"
         android:inputType="text"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText7" />
+        app:layout_constraintTop_toBottomOf="@+id/technicianEdit" />
 
     <EditText
-        android:id="@+id/editTextText7"
+        android:id="@+id/technicianEdit"
         android:layout_width="173dp"
         android:layout_height="38dp"
         android:layout_marginTop="28dp"
@@ -136,7 +169,7 @@
         android:ems="10"
         android:inputType="text"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText" />
+        app:layout_constraintTop_toBottomOf="@+id/orderType_edit" />
 
     <TextView
         android:id="@+id/textView12"
@@ -165,7 +198,7 @@
         tools:layout_editor_absoluteY="20dp" />
 
     <EditText
-        android:id="@+id/editTextText"
+        android:id="@+id/orderType_edit"
         android:layout_width="173dp"
         android:layout_height="38dp"
         android:layout_marginTop="140dp"
@@ -198,5 +231,15 @@
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+    <Button
+        android:id="@+id/submit_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="620dp"
+        android:text="Submit"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
