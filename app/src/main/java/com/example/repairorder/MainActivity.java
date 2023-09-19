@@ -23,8 +23,8 @@ public class MainActivity extends AppCompatActivity {
 
             double sub = cost_inspection + cost_paint + cost_part + cost_labor;
             subTotalText.setText("$" + String.valueOf(String.format("%.2f",sub)));
-            taxText.setText("$" + String.valueOf(String.format("%.2f",sub/10)));
-            totalText.setText("$" + String.valueOf(String.format("%.2f",sub + (sub/7))));
+            taxText.setText("$" + String.valueOf(String.format("%.2f",sub/9.25)));
+            totalText.setText("$" + String.valueOf(String.format("%.2f",sub + (sub/9.25))));
 
         }
     };
