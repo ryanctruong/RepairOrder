@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
 
         submitButton = findViewById(R.id.submit_button);
         technicianET = findViewById(R.id.technicianEdit);
-        subTotalText = findViewById(R.id.subtotal_value);
+
 
         orderType = findViewById(R.id.orderType_edit);
         inspection = findViewById(R.id.inspect_edit);
@@ -56,8 +56,13 @@ public class MainActivity extends AppCompatActivity {
         parts = findViewById(R.id.parts_edit);
         labor = findViewById(R.id.labor_edit);
 
+
         taxText = findViewById(R.id.tax_value);
+        taxText.setText("$0.0");
         totalText = findViewById(R.id.total_value);
+        totalText.setText("$0.0");
+        subTotalText = findViewById(R.id.subtotal_value);
+        subTotalText.setText("$0.0");
 
         inspection.addTextChangedListener(new TextWatcher() {
             @Override

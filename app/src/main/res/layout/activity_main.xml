@@ -15,7 +15,7 @@
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:text="$0.0" />
+        android:autofillHints="$0.0"/>
 
     <TextView
         android:id="@+id/tax_value"
@@ -26,7 +26,7 @@
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:text="$0.0" />
+        android:autofillHints="$0.0"/>
 
     <TextView
         android:id="@+id/subtotal_value"
@@ -37,7 +37,7 @@
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:text="$0.0" />
+        android:autofillHints="$0.0" />
 
     <TextView
         android:id="@+id/textView11"
