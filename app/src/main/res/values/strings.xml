@@ -11,4 +11,9 @@
     <string name="repair_order">Repair Order</string>
     <string name="technician">Technician</string>
     <string name="total">Total</string>
+    <string-array name="values">
+        <item>Regular</item>
+        <item>Extra</item>
+        <item>Poor Mans Choice</item>
+    </string-array>
 </resources>

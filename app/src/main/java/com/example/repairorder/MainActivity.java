@@ -7,9 +7,15 @@ import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -32,6 +38,19 @@ public class MainActivity extends AppCompatActivity {
 
         }
     };
+
+    AdapterView.OnItemSelectedListener spinListener = new AdapterView.OnItemSelectedListener() {
+        @Override
+        public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+            String message = adapterView.getItemAtPosition(i).toString();
+            Toast.makeText(getApplicationContext(), message, Toast.LENGTH_LONG).show();
+        }
+
+        @Override
+        public void onNothingSelected(AdapterView<?> adapterView) {
+
+        }
+    };
     Button submitButton;
     EditText orderType,technicianET, inspection, paint, parts, labor;
     TextView subTotalText, taxText, totalText;
@@ -39,6 +58,8 @@ public class MainActivity extends AppCompatActivity {
 
     double cost_inspection, cost_paint, cost_part, cost_labor;
     //double sub = 0;
+
+    Spinner spin;
 
 
     @Override
@@ -50,11 +71,11 @@ public class MainActivity extends AppCompatActivity {
         technicianET = findViewById(R.id.technicianEdit);
 
 
-        orderType = findViewById(R.id.orderType_edit);
         inspection = findViewById(R.id.inspect_edit);
         paint = findViewById(R.id.paint_edit);
         parts = findViewById(R.id.parts_edit);
         labor = findViewById(R.id.labor_edit);
+        spin = findViewById(R.id.spin);
 
 
         taxText = findViewById(R.id.tax_value);
@@ -64,6 +85,13 @@ public class MainActivity extends AppCompatActivity {
         subTotalText = findViewById(R.id.subtotal_value);
         subTotalText.setText("$0.0");
 
+        spin.setOnItemSelectedListener(spinListener);
+        ArrayList<String> valuesList = new ArrayList<>();
+        valuesList.add("Regular");
+        valuesList.add("Butter");
+
+        ArrayAdapter<String> typeAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1,valuesList);
+        spin.setAdapter(typeAdapter);
         inspection.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
